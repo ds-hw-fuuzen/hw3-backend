@@ -8,8 +8,8 @@ services:
   backend:
     image: "ghcr.io/ds-hw-fuuzen/hw2-backend:master"
     environment:
-      - BKPAAS_APP_ID=${YOUR_APP_ID}
-      - BKPAAS_APP_SECRET=${YOUR_APP_SECRET}
+      - BKPAAS_APP_ID=hw3-fuuzen
+      - BKPAAS_APP_SECRET=NbNftngmxrBN2d7MW04jnHjR8JAuVvOT9UbS
       - BKPAAS_MAJOR_VERSION=3
       - BK_PAAS2_URL=https://ce.bktencent.com
       - BK_COMPONENT_API_URL=https://bkapi.ce.bktencent.com
@@ -18,12 +18,13 @@ services:
       - DEV_DB_PORT=3306
       - DEV_DB_USER=root
       - DEV_DB_PASSWORD=root
-      - DEV_DB_NAME=${YOUR_APP_ID}
+      - DEV_DB_NAME=hw3-fuuzen
       - CORS_ALLOWED_ORIGIN=http://dev.ce.bktencent.com:5000
       - BKPAAS_JOB_URL=https://job.ce.bktencent.com
     depends_on:
       - db
     volumes:
+      # - /c/Users/YQ/.ssh:/root/.ssh  # for my windows
       - ${HOME}/.ssh:/root/.ssh
     networks:
       - hw3_bridge
@@ -32,7 +33,7 @@ services:
     image: mysql:latest
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: ${YOUR_APP_ID}
+      MYSQL_DATABASE: hw3-fuuzen
       # MYSQL_USER: 
       # MYSQL_PASSWORD: 
     # volumes:
