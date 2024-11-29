@@ -9,7 +9,7 @@ modules/permission/migrations
 *.pyc
 *.gv
 *.sql
-*.env
+# *.env # I don't ignore this
 *.sh
 *.pyi
 *.log
@@ -23,6 +23,6 @@ debug
 static_root
 config/local_settings.py
 dev
-test.env
-local_settings.py
+# test.env # I don't ignore this
 __pycache__
+# local_settings.py  # I don't ignore this

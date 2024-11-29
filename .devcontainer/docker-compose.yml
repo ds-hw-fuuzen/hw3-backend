@@ -20,6 +20,7 @@ services:
       - DEV_DB_PASSWORD=root
       - DEV_DB_NAME=${YOUR_APP_ID}
       - CORS_ALLOWED_ORIGIN=http://dev.ce.bktencent.com:5000
+      - BKPAAS_JOB_URL=https://job.ce.bktencent.com
     depends_on:
       - db
     volumes:
